@@ -4,11 +4,11 @@ public class music {
 
 	public String nome;
 	public String artista;
-	public int duração;
+	public int duracao;
 	
 	
 	@Override
 	public String toString() {
-		return "music [nome=" + nome + ", artista=" + artista + ", duração=" + duração + "]";
+		return "Nome = " + nome + " | Artista = " + artista + " | Duração = " + duracao/1000 + " segundos";
 	} 
 }

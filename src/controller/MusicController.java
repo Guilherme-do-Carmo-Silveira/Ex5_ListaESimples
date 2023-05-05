@@ -12,6 +12,10 @@ public class MusicController {
 	public void addmusic(ListaEncadeadaObj l, String musica) {
 		String [] vt = musica.split(";");
 		music m = new music();
+		m.nome = vt[0];
+		m.artista = vt[1];
+		int duracao = Integer.parseInt(vt[2]);
+		m.duracao = duracao; 
 		
 		if(l.isEmpty()) {
 			l.addFirst(m);
@@ -33,14 +37,13 @@ public class MusicController {
 	}
 	
 	public void execplaylist(ListaEncadeadaObj l) {
-		System.out.println("PlayList de DoCarmo");
+		System.out.println("\t\t   PlayList de DoCarmo");
 		int tamanho = l.size();
 		for(int i = 0; i < tamanho; i++) {
 			try {
 				music m =(music) l.get(i);
 				System.out.println(m);
-				Thread.sleep(m.);
-				
+				Thread.sleep(m.duracao);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
